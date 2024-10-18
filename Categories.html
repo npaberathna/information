@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Super mart</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <style>
+        .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" id="logo">Super <span>Mart</span></a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Categories</a>
+                <div class="dropdown-content">
+                    <a href="freshp.html">fresh Products</a>
+                    <a href="bakeryform.html">Bakery Items</a>
+                    <a href="bev.html">Beverages</a>
+                    <a href="#">Sweet & Snacks</a>
+                    <a href="#">Household Items</a>
+                    <a href="#">Health & Beauty</a>
+                    <a href="#">Liquors</a>
+                    <a href="petcare.html">Pet Care</a>
+                </div>
+            </div>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#">Contact US</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+       
+
+    </header>
+
+<div class="organic-menu">
+
+    <h1>Item <span>menu</span></h1>
+
+    <div class="orgainic-inner">
+        <a href="freshp.html" class="freshfood">Fresh Products</a>
+        <a href="bakeryform.html" class="freshfood">Bakery Items</a>
+        <a href="bev.html" class="freshfood">Beverages</a>
+        <a href="#" class="freshfood">Sweet & Snacks</a>
+        <a href="#" class="freshfood">Household Items</a>
+        <a href="#" class="freshfood">Health & Beauty</a>
+        <a href="#" class="freshfood">Liquors</a>
+        <a href="petcare.html" class="freshfood">Pet Care</a>
+    </div>
+</div>
+
+<!-- fresh food -->
+<div class="fresh-food-section">
+    <h1>look <span>out</span></h1>
+    <div class="inner-food">
+        <div class="fresh-box">
+            <img src="https://spar2u.lk/cdn/shop/files/category-02_285x285.png?v=1710419021" alt="">
+            <h3>Fresh Products</h3>
+        </div>
+
+        <div class="fresh-box">
+            <img src="https://cargillsonline.com/VendorItems/MenuCategory/74028631-SUB-CAT-IMAGE_Bakery.jpg" alt="">
+            <h3>Bakery Items</h3>
+        </div>
+
+        <div class="fresh-box">
+            <img src="https://spar2u.lk/cdn/shop/files/category-01_285x285.png?v=1710419019" alt="">
+            <h3> Beverages</h3>
+        </div>
+
+        <div class="fresh-box">
+            <img src="https://spar2u.lk/cdn/shop/files/category-05_285x285.png?v=1710419021" alt="">
+            <h3>Sweet & Snacks</h3>
+        </div>
+
+        <div class="fresh-box">
+            <img src="https://cargillsonline.com/VendorItems/MenuCategory/73018462-SUB-CAT-IMAGE_Household.jpg" alt="">
+            <h3>Household Items</h3>
+        </div>
+
+        <div class="fresh-box">
+            <img src="https://cargillsonline.com/VendorItems/MenuCategory/95731420-SUB-CAT-IMAGES-Health-&-Beauty.jpg" alt="">
+            <h3>Health & Beauty</h3>
+        </div>
+        <div class="fresh-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxdSXRhnOelei4iIqON0_9PZh_g7tKMCqyag&s" alt="">
+            <h3> Liquors</h3>
+        </div>
+        <div class="fresh-box">
+            <img src="https://cargillsonline.com/VendorItems/MenuCategory/07351964-SUB-CAT-IMAGE_Pet-Products.jpg" alt="">
+            <h3>Pet Care</h3>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+    <div class="footer">
+        <p>ABCD Marketing Services Pvt Ltd.<br>No:148, Vauxhall Street, Colombo 2, Sri Lanka.</p>
+        <p>+94 11 2303500<br>(Daily operating hours 8.00 A.M to 8.00 P.M)</p>
+        <p>Quick Links: <a href="home.html">Home</a> | <a href="Catalogue.html">Catalogue & Deals</a> | <a href="Utility.html">Utility bill payments</a> | <a href="Track.html">Track my order</a> | <a href="Categories.html">Categories</a></p>
+        <p>Useful Links: <a href="Privacy.html">Privacy Policy</a> | <a href="FAQ.html">FAQ</a> | <a href="Terms.html">Terms and Conditions</a> | <a href="Stores.html">Stores</a> | <a href="Delivery.html">Delivery grid</a> | <a href="Service.html">Customer Service</a> | <a href="#">Contact us</a> | <a href="AboutUs.html">About us</a></p>
+        <p class="copyright">© 2024 ABCD Marketing Services Pvt Ltd. All rights reserved.</p>
+    </div>
+
+</div>
+FAQ.html
+</body>
+</html>

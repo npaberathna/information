@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Super Mart</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            width: 200px;
+            vertical-align: top;
+            margin-right: 10px;
+            text-align: center;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .cart {
+            margin-top: 20px;
+            border-top: 2px solid #000;
+            padding-top: 10px;
+            clear: both;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .cart-item img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+        .added {
+            background-color: green;
+            color: white;
+        }
+        .total {
+            font-weight: bold;
+        }
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+   <header class="header">
+        <a href="#" id="logo">Super <span>Mart</span></a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Categories</a>
+                <div class="dropdown-content">
+                    <a href="freshp.html">fresh Products</a>
+                    <a href="bakeryform.html">Bakery Items</a>
+                    <a href="bev.html">Beverages</a>
+                    <a href="#">Sweet & Snacks</a>
+                    <a href="#">Household Items</a>
+                    <a href="#">Health & Beauty</a>
+                    <a href="#">Liquors</a>
+                    <a href="petcare.html">Pet Care</a>
+                </div>
+            </div>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#">Contact US</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+       
+
+    </header>
+    <div class="organic-menu">
+
+    <h1><span>Pet Care</span></h1>
+
+    <div class="products">
+        <!-- Pet Care Items -->
+        <div class="product">
+            <h3>Pedigree Adult Dog Food</h3>
+            <img src="https://img.drz.lazcdn.com/static/lk/p/9e2b8ece76093f4d79d4baa0065454c4.jpg_200x200q90.jpg_.webp" alt="Pedigree Dog Food">
+            <p>Price: LKR 2500.00</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Pedigree Adult Dog Food" data-product-price="2500.00" data-product-id="1" data-product-image="https://img.drz.lazcdn.com/static/lk/p/9e2b8ece76093f4d79d4baa0065454c4.jpg_200x200q90.jpg_.webp">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Whiskas Cat Food</h3>
+            <img src="https://www.bigbasket.com/media/uploads/p/l/40262658_1-whiskas-dry-cat-food-for-adult-cats-chicken-flavour-1-years.jpg" alt="Whiskas Cat Food">
+            <p>Price: LKR 1800.00</p>
+            <label for="quantity-2">Quantity:</label>
+            <input type="number" id="quantity-2" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Whiskas Cat Food" data-product-price="1800.00" data-product-id="2" data-product-image="https://www.bigbasket.com/media/uploads/p/l/40262658_1-whiskas-dry-cat-food-for-adult-cats-chicken-flavour-1-years.jpg">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Pet Shampoo</h3>
+            <img src="https://img.drz.lazcdn.com/static/lk/p/226129eb1b2e8929acaa087fd1b785f6.jpg_200x200q90.jpg_.webp" alt="Pet Shampoo">
+            <p>Price: LKR 500.00</p>
+            <label for="quantity-3">Quantity:</label>
+            <input type="number" id="quantity-3" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Pet Shampoo" data-product-price="500.00" data-product-id="3" data-product-image="https://img.drz.lazcdn.com/static/lk/p/226129eb1b2e8929acaa087fd1b785f6.jpg_200x200q90.jpg_.webp">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Dog Leash</h3>
+            <img src="https://img.drz.lazcdn.com/static/lk/p/4ed79547ec95bd5de8e234a983c8e7ed.jpg_200x200q90.jpg_.webp" alt="Dog Leash">
+            <p>Price: LKR 750.00</p>
+            <label for="quantity-4">Quantity:</label>
+            <input type="number" id="quantity-4" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Dog Leash" data-product-price="750.00" data-product-id="4" data-product-image="https://img.drz.lazcdn.com/static/lk/p/4ed79547ec95bd5de8e234a983c8e7ed.jpg_200x200q90.jpg_.webp">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Cat Litter</h3>
+            <img src="https://img.drz.lazcdn.com/static/lk/p/49fd0408f008e825fb2257eef33764e6.jpg_200x200q90.jpg_.webp" alt="Cat Litter">
+            <p>Price: LKR 1000.00</p>
+            <label for="quantity-5">Quantity:</label>
+            <input type="number" id="quantity-5" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Cat Litter" data-product-price="1000.00" data-product-id="5" data-product-image="https://img.drz.lazcdn.com/static/lk/p/49fd0408f008e825fb2257eef33764e6.jpg_200x200q90.jpg_.webp">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Pet Bed</h3>
+            <img src="https://img.drz.lazcdn.com/static/lk/p/63c0dcdb9a2de1f528680d030c492b83.png_200x200q90.png_.webp" alt="Pet Bed">
+            <p>Price: LKR 3000.00</p>
+            <label for="quantity-6">Quantity:</label>
+            <input type="number" id="quantity-6" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Pet Bed" data-product-price="3000.00" data-product-id="6" data-product-image="https://img.drz.lazcdn.com/static/lk/p/63c0dcdb9a2de1f528680d030c492b83.png_200x200q90.png_.webp">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Dog Chew Toy</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThWQbktNORR0OuLA6VRomXeagvWHRW7OyIvg&s" alt="Dog Chew Toy">
+            <p>Price: LKR 450.00</p>
+            <label for="quantity-7">Quantity:</label>
+            <input type="number" id="quantity-7" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Dog Chew Toy" data-product-price="450.00" data-product-id="7" data-product-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThWQbktNORR0OuLA6VRomXeagvWHRW7OyIvg&s">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Cat Scratching Post</h3>
+            <img src="https://img.drz.lazcdn.com/g/kf/Sf668fad2dbe54da48518eb23c4f1b5501.jpg_200x200q90.jpg_.webp" alt="Cat Scratching Post">
+            <p>Price: LKR 1500.00</p>
+            <label for="quantity-8">Quantity:</label>
+            <input type="number" id="quantity-8" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Cat Scratching Post" data-product-price="1500.00" data-product-id="8" data-product-image="https://img.drz.lazcdn.com/g/kf/Sf668fad2dbe54da48518eb23c4f1b5501.jpg_200x200q90.jpg_.webp">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Pet Grooming Kit</h3>
+            <img src="https://img.drz.lazcdn.com/static/lk/p/278c6e3fd9a32cc4457052425d77a250.jpg_200x200q90.jpg_.webp" alt="Pet Grooming Kit">
+            <p>Price: LKR 1200.00</p>
+            <label for="quantity-9">Quantity:</label>
+            <input type="number" id="quantity-9" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Pet Grooming Kit" data-product-price="1200.00" data-product-id="9" data-product-image="https://img.drz.lazcdn.com/static/lk/p/278c6e3fd9a32cc4457052425d77a250.jpg_200x200q90.jpg_.webp">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Pet Carrier</h3>
+            <img src="https://img.drz.lazcdn.com/g/kf/Sac0dc723a0e74ed09a0f199bc7cf8b82q.jpg_200x200q90.jpg_.webp" alt="Pet Carrier">
+            <p>Price: LKR 2500.00</p>
+            <label for="quantity-10">Quantity:</label>
+            <input type="number" id="quantity-10" class="quantity-input" min="1" value="1">
+            <button class="add-to-cart-btn" data-product-name="Pet Carrier" data-product-price="2500.00" data-product-id="10" data-product-image="https://img.drz.lazcdn.com/g/kf/Sac0dc723a0e74ed09a0f199bc7cf8b82q.jpg_200x200q90.jpg_.webp">Add to Cart</button>
+        </div>
+    </div>
+
+  <!-- Cart Section -->
+  <div class="cart">
+    <h3>Cart</h3>
+    <div id="cart-items">
+      <!-- Items will appear here -->
+    </div>
+    <p class="total">Total: LKR <span id="cart-total">0</span></p>
+  </div>
+
+  <script>
+    let totalPrice = 0;  // Initialize total price
+    let cartItems = {};  // To track products in the cart and their quantities
+
+    // Add event listener to "Add to Cart" buttons
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Get product details
+        const productName = this.getAttribute('data-product-name');
+        const productPrice = parseFloat(this.getAttribute('data-product-price'));
+        const productImage = this.getAttribute('data-product-image');
+        const productId = this.getAttribute('data-product-id');
+        
+        // Get the quantity selected by the user
+        const quantityInputId = this.previousElementSibling.id;
+        const quantity = parseInt(document.getElementById(quantityInputId).value);
+
+        // Calculate total price for this product based on quantity
+        const productTotalPrice = productPrice * quantity;
+
+        // Check if the product is already in the cart
+        if (cartItems[productId]) {
+          alert('This product is already in the cart. You can change the quantity in the cart.');
+          return;
+        }
+
+        // Add product to cartItems
+        cartItems[productId] = {
+          name: productName,
+          price: productPrice,
+          quantity: quantity,
+          total: productTotalPrice
+        };
+
+        // Create a new cart item
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.setAttribute('data-product-id', productId);  // Use this ID to remove item later
+        cartItem.innerHTML = `
+          <img src="${productImage}" alt="${productName}">
+          <span>${productName} - LKR ${productPrice.toFixed(2)} x <input type="number" value="${quantity}" class="cart-quantity-input" data-product-id="${productId}" min="1"> = LKR <span class="cart-item-total"> ${productTotalPrice.toFixed(2)}</span></span>
+          <button class="remove-btn" data-product-id="${productId}" data-product-price="${productTotalPrice}">Remove</button>
+        `;
+
+        // Add the item to the cart
+        document.getElementById('cart-items').appendChild(cartItem);
+
+        // Update the overall total price
+        totalPrice += productTotalPrice;
+        document.getElementById('cart-total').textContent = totalPrice.toFixed(2);
+
+        // Change button color to green and disable it
+        this.classList.add('added');
+        this.textContent = 'Added to Cart';
+        this.disabled = true;
+      });
+    });
+
+    // Add event listener for removing items from the cart
+    document.getElementById('cart-items').addEventListener('click', function(event) {
+      if (event.target.classList.contains('remove-btn')) {
+        // Get product details from the clicked remove button
+        const productId = event.target.getAttribute('data-product-id');
+        const productTotalPrice = cartItems[productId].total;
+
+        // Remove the corresponding cart item
+        const cartItem = document.querySelector(`.cart-item[data-product-id="${productId}"]`);
+        cartItem.remove();
+
+        // Update the overall total price
+        totalPrice -= productTotalPrice;
+        document.getElementById('cart-total').textContent = totalPrice.toFixed(2);
+
+        // Enable the corresponding "Add to Cart" button again
+        const addToCartButton = document.querySelector(`.add-to-cart-btn[data-product-id="${productId}"]`);
+        addToCartButton.classList.remove('added');
+        addToCartButton.textContent = 'Add to Cart';
+        addToCartButton.disabled = false;
+
+        // Remove the product from cartItems
+        delete cartItems[productId];
+      }
+    });
+
+    // Update quantity and recalculate total in the cart
+    document.getElementById('cart-items').addEventListener('input', function(event) {
+      if (event.target.classList.contains('cart-quantity-input')) {
+        const productId = event.target.getAttribute('data-product-id');
+        const newQuantity = parseInt(event.target.value);
+
+        if (newQuantity < 1) {
+          alert('Quantity must be at least 1.');
+          event.target.value = 1;
+          return;
+        }
+
+        // Recalculate the total for this product
+        const productPrice = cartItems[productId].price;
+        const newTotalPrice = productPrice * newQuantity;
+
+        // Update the product's total in the cart
+        const cartItemTotalElement = event.target.parentElement.querySelector('.cart-item-total');
+        cartItemTotalElement.textContent = newTotalPrice.toFixed(2);
+
+        // Update the overall cart total price
+        totalPrice -= cartItems[productId].total;  // Subtract the old total
+        cartItems[productId].total = newTotalPrice;  // Update with new total
+        cartItems[productId].quantity = newQuantity;  // Update quantity
+        totalPrice += newTotalPrice;  // Add the new total
+
+        document.getElementById('cart-total').textContent = totalPrice.toFixed(2);
+      }
+    });
+  </script>
+
+
+
+    <script src="script.js"></script>
+     <div class="footer">
+        <p>ABCD Marketing Services Pvt Ltd.<br>No:148, Vauxhall Street, Colombo 2, Sri Lanka.</p>
+        <p>+94 11 2303500<br>(Daily operating hours 8.00 A.M to 8.00 P.M)</p>
+        <p>Quick Links: <a href="home.html">Home</a> | <a href="Catalogue.html">Catalogue & Deals</a> | <a href="Utility.html">Utility bill payments</a> | <a href="Track.html">Track my order</a> | <a href="Categories.html">Categories</a></p>
+        <p>Useful Links: <a href="Privacy.html">Privacy Policy</a> | <a href="FAQ.html">FAQ</a> | <a href="Terms.html">Terms and Conditions</a> | <a href="Stores.html">Stores</a> | <a href="Delivery.html">Delivery grid</a> | <a href="Service.html">Customer Service</a> | <a href="#">Contact us</a> | <a href="AboutUs.html">About us</a></p>
+        <p class="copyright">© 2024 ABCD Marketing Services Pvt Ltd. All rights reserved.</p>
+    </div>
+
+</div>
+</script>
+
+
+
+
+</body>
+</html>

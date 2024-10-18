@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Super mart</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <style>
+        .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fdfb; /* Light background */
+            color: #333;
+        }
+
+        header {
+            background-color: #a8e6cf; /* Light green */
+            color: #2d6a4f; /* Dark green */
+            text-align: center;
+            padding: 50px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            animation: fadeIn 1s ease;
+        }
+
+        header h2 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2d6a4f; /* Dark green */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #a8e6cf; /* Light green on hover */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff; /* White background for cards */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #2d6a4f; /* Dark green */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+
+        ul {
+            list-style: none; /* Custom bullet style */
+            padding-left: 0;
+            margin: 10px 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        li::before {
+            content: '✓'; /* Custom bullet */
+            position: absolute;
+            left: 0;
+            color: #2d6a4f; /* Dark green for bullet */
+            font-weight: bold;
+        }
+
+        li:hover {
+            color: #a8e6cf; /* Light green on hover */
+        }
+
+       
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" id="logo">Super <span>Mart</span></a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Categories</a>
+                <div class="dropdown-content">
+                    <a href="freshp.html">fresh Products</a>
+                    <a href="bakeryform.html">Bakery Items</a>
+                    <a href="bev.html">Beverages</a>
+                    <a href="#">Sweet & Snacks</a>
+                    <a href="#">Household Items</a>
+                    <a href="#">Health & Beauty</a>
+                    <a href="#">Liquors</a>
+                    <a href="petcare.html">Pet Care</a>
+                </div>
+            </div>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#">Contact US</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+       
+
+    </header>
+
+    <div class="organic-menu">
+
+    <h1> <span>About Us</span></h1>
+    <h1> <span>ABCD Marketing Services Pvt Ltd.</span></h1>
+
+    <div class="container">
+        <div class="card">
+            <h2>Who We Are</h2>
+            <p>At Sensy Lanka Pvt Ltd, we are dedicated to providing the highest quality products and an exceptional shopping experience. Our supermarket serves as a reliable partner for all your grocery needs.</p>
+        </div>
+
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>Our mission is to deliver:</p>
+            <ul>
+                <li>Exceptional quality products</li>
+                <li>Affordable pricing</li>
+                <li>Outstanding customer service</li>
+                <li>Innovative shopping solutions</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Why Choose Us?</h2>
+            <p>We excel in the supermarket industry because:</p>
+            <ul>
+                <li>A diverse range of products</li>
+                <li>Regular promotions and discounts</li>
+                <li>Commitment to sustainability</li>
+                <li>Accessible locations and online shopping</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>For any inquiries, feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="supermart@foodcity.com" style="color: #2d6a4f;">supermart@foodcity.com</a></li>
+                <li>Phone: +94 11 2303500</li>
+                <li>Address: No:148, Vauxhall Street, Colombo 2, Sri Lanka.</li>
+            </ul>
+        </div>
+    </div>
+
+     <div class="footer">
+        <p>ABCD Marketing Services Pvt Ltd.<br>No:148, Vauxhall Street, Colombo 2, Sri Lanka.</p>
+        <p>+94 11 2303500<br>(Daily operating hours 8.00 A.M to 8.00 P.M)</p>
+        <p>Quick Links: <a href="home.html">Home</a> | <a href="Catalogue.html">Catalogue & Deals</a> | <a href="Utility.html">Utility bill payments</a> | <a href="Track.html">Track my order</a> | <a href="Categories.html">Categories</a></p>
+        <p>Useful Links: <a href="Privacy.html">Privacy Policy</a> | <a href="FAQ.html">FAQ</a> | <a href="Terms.html">Terms and Conditions</a> | <a href="Stores.html">Stores</a> | <a href="Delivery.html">Delivery grid</a> | <a href="Service.html">Customer Service</a> | <a href="#">Contact us</a> | <a href="AboutUs.html">About us</a></p>
+        <p class="copyright">© 2024 ABCD Marketing Services Pvt Ltd. All rights reserved.</p>
+    </div>
+
+</div>
+</body>
+</html>

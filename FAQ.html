@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Super mart</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <style>
+        .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .faq-section {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .faq-header h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        .faq-header p {
+            font-size: 18px;
+            color: #555;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .faq-item h2 {
+            font-size: 22px;
+            color: #28a745;
+            cursor: pointer;
+        }
+        .faq-item p {
+            font-size: 16px;
+            color: #555;
+            display: none;
+            margin-top: 10px;
+        }
+        .faq-item.active p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" id="logo">Super <span>Mart</span></a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Categories</a>
+                <div class="dropdown-content">
+                    <a href="freshp.html">fresh Products</a>
+                    <a href="bakeryform.html">Bakery Items</a>
+                    <a href="bev.html">Beverages</a>
+                    <a href="#">Sweet & Snacks</a>
+                    <a href="#">Household Items</a>
+                    <a href="#">Health & Beauty</a>
+                    <a href="#">Liquors</a>
+                    <a href="petcare.html">Pet Care</a>
+                </div>
+            </div>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#">Contact US</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+<div class="organic-menu">
+
+    <h1><span>FAQ</span></h1>
+
+
+<section class="faq-section">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Your queries answered. Find everything you need to know about shopping with Food City!</p>
+        </div>
+
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+            <h2>1. How do I place an order online?</h2>
+            <p>To place an order, browse through our products, add items to your cart, and click on the checkout button. You will be asked to provide your delivery information and payment method to complete your purchase.</p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+            <h2>2. What payment methods do you accept?</h2>
+            <p>We accept a variety of payment methods including credit cards, debit cards, and mobile payments like eZ Cash and mCash. You can also pay upon delivery using cash.</p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+            <h2>3. Do you offer home delivery?</h2>
+            <p>Yes, we offer home delivery to most locations. Delivery charges may vary depending on your location and the total value of your order.</p>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+            <h2>4. Can I modify my order after placing it?</h2>
+            <p>Once an order is placed, you cannot modify it directly. However, you can contact our customer service within 30 minutes of placing the order to request changes, if possible.</p>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+            <h2>5. How can I track my order?</h2>
+            <p>After placing your order, you will receive a confirmation email with tracking information. You can also track your order status in the "My Orders" section of your account.</p>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+            <h2>6. What is your return policy?</h2>
+            <p>If you are not satisfied with a product, you can return it within 7 days of delivery, provided it is in its original condition. Perishable items like fresh produce cannot be returned.</p>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+            <h2>7. What if an item is out of stock?</h2>
+            <p>If an item is out of stock, we will notify you and you can choose whether to cancel the order or replace the item with an alternative. We do our best to maintain accurate stock levels on the website.</p>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+            <h2>8. Can I cancel my order?</h2>
+            <p>Yes, you can cancel your order within 30 minutes of placing it. Once the order is processed for delivery, cancellation may not be possible. Please contact customer service for assistance.</p>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-item">
+            <h2>9. How long does delivery take?</h2>
+            <p>Delivery usually takes 1-2 business days, depending on your location. In some cases, delivery may take longer during peak times or due to unforeseen circumstances.</p>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="faq-item">
+            <h2>10. Is there a minimum order amount?</h2>
+            <p>Yes, there is a minimum order value of Rs. 500 for delivery. For pickup orders, there is no minimum value.</p>
+        </div>
+
+    </section>
+
+    <script>
+        // Toggle FAQ answers when the question is clicked
+        document.querySelectorAll('.faq-item h2').forEach(faqTitle => {
+            faqTitle.addEventListener('click', function() {
+                const faqItem = this.parentNode;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <div class="footer">
+        <p>ABCD Marketing Services Pvt Ltd.<br>No:148, Vauxhall Street, Colombo 2, Sri Lanka.</p>
+        <p>+94 11 2303500<br>(Daily operating hours 8.00a.m to 8.00p.m)</p>
+        <p>Quick Links: <a href="home.html">Home</a> | <a href="Catalogue.html">Catalogue & Deals</a> | <a href="Utility.html">Utility bill payments</a> | <a href="Track.html">Track my order</a> | <a href="Categories.html">Categories</a></p>
+        <p>Useful Links: <a href="Privacy.html">Privacy Policy</a> | <a href="FAQ.html">FAQ</a> | <a href="Terms.html">Terms and Conditions</a> | <a href="Stores.html">Stores</a> | <a href="Delivery.html">Delivery grid</a> | <a href="Service.html">Customer Service</a> | <a href="#">Contact us</a> | <a href="AboutUs.html">About us</a></p>
+        <p class="copyright">© 2024 ABCD Marketing Services Pvt Ltd. All rights reserved.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

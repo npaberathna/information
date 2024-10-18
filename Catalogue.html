@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Super mart</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <style>
+        .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .catalogue-section {
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .catalogue-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .catalogue-header h2 {
+            font-size: 36px;
+            color: #333;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-info h3 {
+            font-size: 22px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .product-info p {
+            font-size: 16px;
+            color: #777;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #28a745;
+            margin-top: 5px;
+        }
+        .deal-badge {
+            background-color: #ff6347;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        .add-to-cart-btn, .remove-from-cart-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart-btn:hover, .remove-from-cart-btn:hover {
+            background-color: #218838;
+        }
+        .cart-section {
+            margin: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart-header {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .cart-items {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-items li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .remove-from-cart-btn {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" id="logo">Super <span>Mart</span></a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Categories</a>
+                <div class="dropdown-content">
+                    <a href="freshp.html">fresh Products</a>
+                    <a href="bakeryform.html">Bakery Items</a>
+                    <a href="bev.html">Beverages</a>
+                    <a href="#">Sweet & Snacks</a>
+                    <a href="#">Household Items</a>
+                    <a href="#">Health & Beauty</a>
+                    <a href="#">Liquors</a>
+                    <a href="petcare.html">Pet Care</a>
+                </div>
+            </div>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#">Contact US</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">User</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Sign In</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+<div class="organic-menu">
+
+    <h1><span>Catalogue & Deals</span></h1>
+
+    <!-- Catalogue & Deals Section -->
+    <section class="catalogue-section">
+        <div class="catalogue-header">
+            <h2>Discover the best deals and offers available on our products.</h2>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-id="1" data-name="Kist Mixed Fruit Cordial" data-price="720.00">
+                <img src="https://cargillsonline.com/VendorItems/MenuItems/BV60606_1.jpg" alt="Product 1">
+                <div class="product-info">
+                    <h3>Kist Mixed Fruit Cordial</h3>
+                    <p>Amazing product with great features.</p>
+                    <span class="product-price">Rs 720.00</span>
+                    <span class="deal-badge">20% OFF</span>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-id="2" data-name="Product 2" data-price="3000">
+                <img src="images/product2.jpg" alt="Product 2">
+                <div class="product-info">
+                    <h3>Product 2</h3>
+                    <p>High-quality product with limited-time deal.</p>
+                    <span class="product-price">Rs 3,000</span>
+                    <span class="deal-badge">15% OFF</span>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-id="3" data-name="Product 3" data-price="1750">
+                <img src="images/product3.jpg" alt="Product 3">
+                <div class="product-info">
+                    <h3>Product 3</h3>
+                    <p>Exclusive offer on this product today!</p>
+                    <span class="product-price">Rs 1,750</span>
+                    <span class="deal-badge">30% OFF</span>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Add more product cards here -->
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h3 class="cart-header">Your Cart</h3>
+        <ul class="cart-items" id="cart-items">
+            <!-- Cart items will appear here -->
+        </ul>
+        <p><strong>Total: Rs <span id="total-price">0</span></strong></p>
+    </section>
+
+    <script>
+        // JavaScript to handle Add to Cart and Remove from Cart
+
+        let cart = [];
+        const cartItemsElement = document.getElementById('cart-items');
+        const totalPriceElement = document.getElementById('total-price');
+
+        // Function to add item to the cart
+        function addToCart(productId, productName, productPrice) {
+            // Check if item already exists in the cart
+            const existingItem = cart.find(item => item.id === productId);
+            if (existingItem) {
+                alert(`${productName} is already in the cart.`);
+                return;
+            }
+            // Add the new item to the cart
+            const cartItem = { id: productId, name: productName, price: productPrice };
+            cart.push(cartItem);
+            renderCart();
+        }
+
+        // Function to remove item from the cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            renderCart();
+        }
+
+        // Function to render the cart items in the UI
+        function renderCart() {
+            // Clear the cart items element
+            cartItemsElement.innerHTML = '';
+            let totalPrice = 0;
+            
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${item.name} - Rs ${item.price}
+                    <a href="#" class="remove-from-cart-btn" data-id="${item.id}">Remove</a>
+                `;
+                cartItemsElement.appendChild(li);
+                totalPrice += item.price;
+            });
+            
+            totalPriceElement.textContent = totalPrice;
+        }
+
+        // Event listener for Add to Cart buttons
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', event => {
+                event.preventDefault();
+                const productCard = event.target.closest('.product-card');
+                const productId = parseInt(productCard.getAttribute('data-id'));
+                const productName = productCard.getAttribute('data-name');
+                const productPrice = parseInt(productCard.getAttribute('data-price'));
+                
+                addToCart(productId, productName, productPrice);
+            });
+        });
+
+        // Event listener for Remove from Cart buttons
+        cartItemsElement.addEventListener('click', event => {
+            if (event.target.classList.contains('remove-from-cart-btn')) {
+                event.preventDefault();
+                const productId = parseInt(event.target.getAttribute('data-id'));
+                removeFromCart(productId);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <div class="footer">
+        <p>ABCD Marketing Services Pvt Ltd.<br>No:148, Vauxhall Street, Colombo 2, Sri Lanka.</p>
+        <p>+94 11 2303500<br>(Daily operating hours 8.00a.m to 8.00p.m)</p>
+        <p>Quick Links: <a href="home.html">Home</a> | <a href="Catalogue.html">Catalogue & Deals</a> | <a href="Utility.html">Utility bill payments</a> | <a href="Track.html">Track my order</a> | <a href="Categories.html">Categories</a></p>
+        <p>Useful Links: <a href="Privacy.html">Privacy Policy</a> | <a href="FAQ.html">FAQ</a> | <a href="Terms.html">Terms and Conditions</a> | <a href="Stores.html">Stores</a> | <a href="Delivery.html">Delivery grid</a> | <a href="Service.html">Customer Service</a> | <a href="#">Contact us</a> | <a href="AboutUs.html">About us</a></p>
+        <p class="copyright">© 2024 ABCD Marketing Services Pvt Ltd. All rights reserved.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
